@@ -2,49 +2,27 @@ body {
   background-color: darkcyan;
 }
 
-.calculator {
+.window {
   margin: auto;
-  border: 1px solid;
-  width: 400px;
-  height: 480px;
-  background-color: darkcyan;
-  font-size: 20px;
-  font-family: "Courier New", Courier, monospace;
+  margin-top: 100px;
+  width: 365px;
 }
-.calculator .screen {
-  margin: auto;
-  border: 1px solid;
+.window .screen {
+  padding: 5px;
+  background-color: white;
   text-align: right;
-  padding: 15px;
-  color: white;
 }
-.calculator .keypad {
-  margin: auto;
+.window table :first-child {
+  padding-top: 5px;
 }
-.calculator .keypad table {
-  margin: auto;
+.window table :last-child {
+  padding-bottom: 5px;
 }
-.calculator .keypad table td {
-  margin: auto;
-  padding: 2px;
-  width: 100px;
-  height: 100px;
+.window .number {
+  color: blue;
 }
-.calculator .keypad table td button {
-  margin: auto;
-  width: 80px;
-  height: 80px;
-  border-radius: 100px;
-  background-color: rgb(235, 235, 235);
-  font-size: 20px;
-  font-family: "Courier New", Courier, monospace;
-  color: white;
-}
-.calculator .keypad table td .operator {
-  background-color: orange;
-}
-.calculator .keypad table td .clear {
-  background-color: rgb(168, 168, 168);
+.window .operator {
+  color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */
