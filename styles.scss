@@ -15,14 +15,19 @@ body {
         text-align: right;
     }
 
-    table {
-        :first-child {
-            padding-top: 5px;
+    // table {
+    //     :first-child {
+    //         padding-top: 5px;
+    //     }
+    //     :last-child {
+    //         padding-bottom: 5px;
+    //     }
+    // }
+
+        table {
+            background-color: rgba(250, 235, 215, 0);
         }
-        :last-child {
-            padding-bottom: 5px;
-        }
-    }
+
     .number {
         color: blue;
     }
