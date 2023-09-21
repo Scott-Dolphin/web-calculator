@@ -1,0 +1,50 @@
+body {
+  background-color: darkcyan;
+}
+
+.calculator {
+  margin: auto;
+  border: 1px solid;
+  width: 400px;
+  height: 480px;
+  background-color: darkcyan;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.calculator .screen {
+  margin: auto;
+  border: 1px solid;
+  text-align: right;
+  padding: 15px;
+  color: white;
+}
+.calculator .keypad {
+  margin: auto;
+}
+.calculator .keypad table {
+  margin: auto;
+}
+.calculator .keypad table td {
+  margin: auto;
+  padding: 2px;
+  width: 100px;
+  height: 100px;
+}
+.calculator .keypad table td button {
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  background-color: rgb(235, 235, 235);
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+.calculator .keypad table td .operator {
+  background-color: orange;
+}
+.calculator .keypad table td .clear {
+  background-color: rgb(168, 168, 168);
+}
+
+/*# sourceMappingURL=styles.css.map */

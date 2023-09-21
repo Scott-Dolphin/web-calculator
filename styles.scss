@@ -1,0 +1,65 @@
+$show: 1px solid;
+
+body {
+    background-color: darkcyan;
+}
+
+.calculator {
+    margin: auto;
+    border: $show;
+    width:400px;
+    height:480px;
+    background-color: darkcyan;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    .screen {
+
+        margin: auto;
+        border: $show;
+        text-align: right;
+        padding: 15px;
+        color: white;
+    }
+
+    .keypad {
+        margin: auto;
+        table {
+            margin: auto;
+            // border: $show;
+            td {
+                margin: auto;
+                // border: $show;
+                padding: 2px;
+                width: 100px;
+                height: 100px;
+                button {
+                    margin: auto;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 100px;
+                    background-color: rgb(235, 235, 235);
+                    font-size: 20px;
+                    font-family: 'Courier New', Courier, monospace;
+                    color: white;
+                }
+                .operator {
+                    background-color: orange;
+                }
+                .clear {
+                    background-color: rgb(168, 168, 168);
+                }
+            }
+
+        }
+    }
+    
+
+
+    
+}
+
+
+
+
+// to compile: sass styles.scss styles.css
+//             sass <input> <output>
