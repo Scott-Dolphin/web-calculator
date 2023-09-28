@@ -1,8 +1,9 @@
 var queue = "";
 var finished_calculating = true;
 var operator = "";
-var num1 = 0;
-var num2 = 0;
+var num1 = "";
+var num2 = "";
+// var stackNum = "";
 
 function hi_professor() {
     alert("Hi professor i wasn't too sure what I wanted to do with this so here's a cookie 🍪 \n:)");
@@ -17,7 +18,7 @@ function Clear() {
     console.log("queue: " + queue);
     console.log("num1: " + num1);
     console.log("num2: " + num2);
-    
+
 
 }
 /* 
@@ -51,6 +52,7 @@ directly
 function getNum(value) {
 
     if (finished_calculating) {
+        document.getElementById("result").innerText = "‎";
         queue = "";
         num1 = "";
         num2 = "";
@@ -66,12 +68,20 @@ function getNum(value) {
 }
 
 function getOp(value) {
-
-    num1 = queue;
-
     operator = value;
+
+
+    if (num1 != "") {
+        num1 = calculate();
+    }
+    else {
+        num1 = queue;
+    }
     console.log("current operator: " + operator);
     console.log("current num1: " + num1);
+
+
+
 
     switch (operator) {
         case "+":
@@ -141,6 +151,7 @@ function calculate() {
     document.getElementById("result").innerText = ans;
     queue = ans;
     finished_calculating = true;
+    return ans;
 }
 
 
