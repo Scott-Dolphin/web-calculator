@@ -2,7 +2,11 @@ var queue = "";
 var finished_calculating = true;
 var operator = "";
 var num1 = 0;
-var num2 = 0
+var num2 = 0;
+
+function hi_professor() {
+    alert("Hi professor i wasn't too sure what I wanted to do with this so here's a cookie 🍪 \n:)");
+}
 
 
 function Clear() {
