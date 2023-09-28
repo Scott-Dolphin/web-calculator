@@ -24,27 +24,7 @@ function Clear() {
 /* 
 ===================================================================
 
-FIX ME: Calculator only calculates the last 3 chars
-
-my strategy: split getNum() into two functions and use
-variables to calculate instead of accessing the queue
-directly
-
-- getNum(): 
-  counts number of usages since last operator
-  Stores in @buffer. Adds inputs to @queue
-
-- getOp():
-  Gets the @buffer chars and stores in
-  @num1. After, get the type of operator and store
-  in @operator
-
-- calculate(): 
-  To be used after more usages of getNum()
-  Gets the @buffer chars and stores in @num2.
-  After, perform the execution based on the 3
-  variables instead of directly
-  parsing it
+FIX ME: Issue with stacked operations. Suspected issue with line 55.
 
 ===================================================================
 */
@@ -56,6 +36,7 @@ function getNum(value) {
         queue = "";
         num1 = "";
         num2 = "";
+        finished_calculating = true;
     }
     finished_calculating = false;
     let x = value;
@@ -70,13 +51,11 @@ function getNum(value) {
 function getOp(value) {
     operator = value;
 
-
     if (num1 != "") {
-        num1 = calculate();
+        queue = calculate();
     }
-    else {
-        num1 = queue;
-    }
+
+    num1 = queue;
     console.log("current operator: " + operator);
     console.log("current num1: " + num1);
 
@@ -159,74 +138,5 @@ function calculate() {
 
 
 
-
-// function getNum(value) {
-//     // if (document.getElementById("result").innerText.slice(-1) == '‎') {
-//     //     Clear();
-//     // }
-
-
-
-//     if (finished_calculating && ((queue != '+') || (queue != '-') || (queue != 'x') || (queue != '÷'))) {
-//         Clear();
-//         document.getElementById("result").innerTextText = queue.charAt(queue.length - 1);
-//     }
-//     finished_calculating = false;
-
-
-//     let x = value;
-//     queue += x;
-//     console.log("input: " + x);
-//     console.log("queue: " + queue);
-//     document.getElementById("result").innerText += x;
-// }
-
-
-// function calculate() {
-//     let q = document.getElementById("result").innerText;
-//     console.log("screen showing: " + q);
-
-
-//     //remember to start parsing at 1 because of the stupid blank char lmao
-
-//     let a = queue.charAt(queue.length - 1);
-//     let operator = queue.charAt(queue.length - 2);
-//     let b = queue.charAt(queue.length - 3);
-
-
-//     let ans = 0;
-//     switch (operator) {
-//         case '+':
-//             ans = parseInt(a) + parseInt(b);
-//             document.getElementById("result").innerText = ans.toString();
-//             break;
-//         case '-':
-//             ans = parseInt(a) - parseInt(b);
-//             document.getElementById("result").innerText = ans.toString();
-//             break;
-//         case 'x':
-//             ans = parseInt(a) * parseInt(b);
-//             console.log(ans);
-//             document.getElementById("result").innerText = ans.toString();
-//             break;
-//         case '÷':
-//             ans = parseInt(a) / parseInt(b);
-//             document.getElementById("result").innerText = ans.toString();
-//             break;
-//     }
-
-
-
-//     console.log("queue: " + queue);
-//     console.log("calculating " + a + operator + b);
-//     console.log("result:" + ans);
-//     console.log("adding result to queue...");
-//     queue += ans;
-//     finished_calculating = true;
-//     console.log("finished calculating: " + finished_calculating);
-
-
-//     // document.getElementById("result").innerText = ans;
-// }
 
 // to run: node script.js
